@@ -1,20 +1,23 @@
 package com.example.android.quakereport;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by Mazen on 2/26/2018.
  */
 public class Earthquake {
-    private float mMag;
-    private String mDate;
+    private double mMag;
+    private long mTimeInMilliseconds;
     private String mPlace;
 
-    public Earthquake(float mag, String place, String date) {
+    public Earthquake(double mag, String place, long timeInMilliseconds) {
         mMag = mag;
         mPlace = place;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
-    public float getMag() {
+    public double getMag() {
         return mMag;
     }
 
@@ -22,8 +25,10 @@ public class Earthquake {
         return mPlace;
     }
 
-    public String getDate() {
-        return mDate;
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
+
+
 
 }
